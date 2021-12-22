@@ -1,13 +1,14 @@
 import 'reflect-metadata';
-import { useContainer } from 'routing-controllers';
-import { Container } from 'typedi';
+// import path from 'path';
+// import { useContainer } from 'routing-controllers';
+// import { Container } from 'typedi';
 import express from 'express';
 import { useExpressServer } from 'routing-controllers';
 
 export const baseDir = __dirname;
 
 (async () => {
-    useContainer(Container);
+    // useContainer(Container);
     const app = express();
     useExpressServer(app, {
         controllers: [baseDir + '//controllers/*{.js,.ts}'],
